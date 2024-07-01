@@ -29,3 +29,6 @@ jobs:
       - name: Push image
         if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
         run: just push
+        permissions:
+          contents: read
+          packages: write
