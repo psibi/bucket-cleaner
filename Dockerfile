@@ -8,4 +8,4 @@ COPY --chmod=755 ./run.sh /usr/bin
 
 ENTRYPOINT [ "/usr/bin/health-check" ]
 
-CMD [ "--app-description", "Bucket cleaner", "--task-output-timeout", "259200", "--can-exit"  "/usr/bin/run.sh" ]
+CMD [ "--app-description", "Bucket cleaner", "--app-version", "v0.1", "--notification-context", "Test infrastructure", "--task-output-timeout", "259200", "--can-exit",  "/usr/bin/run.sh" ]
